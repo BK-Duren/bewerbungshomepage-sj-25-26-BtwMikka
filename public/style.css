@@ -1,10 +1,75 @@
-/*  -----------------------------------------        */
-/*  Übergreifend / Body                              */
-/*  -----------------------------------------        */
-html, body {
- background-image:url("");
- background-repeat:no-repeat; 
- background-size: cover;      
- overflow:hidden;             
- font-size:12pt;
- }
+/*  ------------------------------------*/
+/*  Standardpositionierung der DIV-Boxen*/
+/*  ------------------------------------*/
+
+#kopfbereich {
+  position:fixed;            ! Position des  Kopfbereichs ist immer oben - FIX!;
+  left:0;                    ! Position ganz links;
+  top:0;                     ! Position oben;
+  border: 1px solid #ccc;    ! Rahmenart und -farbe;
+  background-color: #6a5acd;    ! Hintergrundfarbe;
+  width:100%;                ! Breite des Kopfbereichs;
+  height:100px;              ! Höhe des Kopfbereichs;
+  z-index:2;                 ! Kopfbereich überlagert andere Bereiche;                
+}
+#navibereich {
+  position:fixed;            ! Position des Navibereichs immer links!;
+  top: 100px;                ! Position unterhalb des Kopfbereiches;
+  left:0;                    ! Position ganz links;
+  margin-top:0px;            ! Außenabstand zum Kopfbereich;
+  border: 1px solid #ccc;    ! Rahmenart und -farbe;
+  background-color:	#63b8ff;      ! Hintergrundfarbe;
+  width:100%;                ! Breite des Navibereichs;
+  height:50px;               ! Minimal-Höhe des Navibereichs;
+  z-index:2;                 ! Kopfbereich überlagert andere Bereiche;                
+}
+#textbereich {
+  position:fixed;            ! Position des Textbereichs immer in der Mitte!;
+  left:0;                    ! Textbereich fängt ganz links an;
+  right:0;                   ! …und geht bis ganz rechts;
+  top:150px;                 ! Außenabstand zum Kopfbereich;
+  padding-top:20px;          ! Innenabstand nach oben;
+  padding-bottom:60px;       ! Innenabstand nach unten;
+  padding-right:210px;       ! Außenabstand nach rechts;
+  border: 1px solid #ccc;    ! Rahmenart und -farbe;
+  height:100%;               ! Höhe des Textbereichs;
+  overflow-y: auto;          ! Zeige Scroillbalken automatisch;
+  background-color:rgba(255,255,255,0.5); ! Hintergrund ist weiß mit 50 %iger Transparenz;
+}
+#newsbereich {
+  position:fixed;            ! Position des Newsbereichs immer rechts!;
+  right:0px;                 ! Rechtsausrichtung;
+  top: 150px;                ! Position unterhalb des Kopfbereiches;
+  border: 1px solid #ccc;    ! Rahmenart und -farbe;
+  background-color: #00bfff;   ! Hintergrundfarbe;
+  width:200px;               ! Breite des Newsbereichs;
+  min-height:300px;          ! Minimal-Höhe des Newsbereichs;
+  z-index:2;                 ! Kopfbereich überlagert andere Bereiche;                
+}
+#fussbereich {
+  position:fixed;            ! Position des Fußbereichs immer unten!;
+  bottom: 0;                 ! Unten ausgerichtet!;
+  left:0;                    ! Position ganz links;
+  border: 1px solid #ccc;    ! Rahmenart und -farbe;
+  width: 100%;               ! Breite des Fussbereichs;
+  background-color: #6a5acd;    ! Hintergrundfarbe;
+  height:50px;               ! Höhe des Fußbereichs;
+  z-index:2;                 ! Kopfbereich überlagert andere Bereiche;
+}
+
+/*  ----------------------------------------- */
+/*  Schriftformatierung                       */
+/*  ----------------------------------------- */
+
+p {
+font-family: Garamond, Verdana, Geneva, Lucida, Avantgarde, Arial; ! Festlegung der Schriftart;
+font-style:normal;                                                 ! Festlegung des Schrifttyps;
+font-size:11pt;                                                    ! Festlegung des Schriftgröße;
+font-weight:normal;                                                ! Festlegung der Fettschrift;
+color:#000000;                                                     ! Festlegung des Schriftfarbe;
+}
+.title {
+font-size:12pt;                                                    ! Festlegung des Schriftgröße;
+font-weight:bold;                                                  ! Festlegung der Fettschrift;
+}
+Weitere Infos unter: https://wiki.selfhtml.org/
