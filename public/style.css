@@ -1,3 +1,5 @@
+
+
 /*  ------------------------------------*/
 /*  Standardpositionierung der DIV-Boxen*/
 /*  ------------------------------------*/
@@ -72,4 +74,82 @@ color:#000000;                                                     ! Festlegung 
 font-size:12pt;                                                    ! Festlegung des Schriftgröße;
 font-weight:bold;                                                  ! Festlegung der Fettschrift;
 }
-Weitere Infos unter: https://wiki.selfhtml.org/
+
+header-title {
+font-family:‘Montserrat’, sans-serif;   ! Festlegung der Schriftart;
+font-size:24pt;				! Festlegung des Schriftgröße;
+font-weight:700;			! Festlegung des Fettschrift, hier können Sie auch bold angeben;
+text-align:center;			! Schriftausrichtung, möglich ist left | center | right;
+}
+
+
+/*  -----------------------------------------        */
+/*  Menüformatierung                                 */
+/*  -----------------------------------------        */
+
+/*  Linkformatierung für das Menü übergreifend       */
+.naviformat a, button {
+  	font-family: 'Montserrat', sans-serif;
+  	text-transform:uppercase;	! Verwende Großbuchstaben;
+font-size:90%;            	! Festlegung des Schriftgröße;
+	font-weight:700;		      ! Festlegung Fettschrift für Montserrat;
+	color: rgb(0,0,0);		! Festlegung des Schriftfarbe (schwarz);
+	display: block;			! Art der Anzeige als Blockelement;
+	transition: all 0.3s ease-out 0s; ! Definition Übergang von Normal zu Hover;
+	text-decoration:none;		! Keinen Unterstrich unterhalb des Menütitels;
+  	line-height: 20px;		! Höhe der Zeile wird festgelegt;
+  	padding: 5px 5px;			! Innenabstand nach links/rechts/oben/unten;
+}
+/*  Formatierung des Hauptmenüs (mainnav)                  */
+.mainnav {
+	text-align:left;          ! Textausrichtung rechtbündig;
+	list-style-type: none;     ! es werden keine Aufzählungszeichen dargestellt;
+	margin: 20px 5px;          ! Abstände nach oben/unten und rechts/links;
+       padding: 5px 5px;          ! Innenabstand nach links/rechts/oben/unten;
+}
+
+.mainnav > li {
+	float:left;	! Menüpunkte untereinander, bei float:left, nebeneinander;
+}				
+/*  Formatierung des aktiven Hauptmenüpunkts */
+.mainnav > li > a.active {
+	font-weight:700;		! Festlegung der Fettschrift, auch „bold“ möglich;
+	text-shadow: 1px 1px black, 2px 2px grey, 3px 3px 	#696969; ! Text-Schatten;
+  	color: rgba(90,195,208,1);	! Festlegung des Schriftfarbe;
+}
+/*  Formatierung des Menüpunkts, wenn die Maus darüber fährt */
+.mainnav > li > a:hover {
+	font-weight:700;		! Festlegung der Fettschrift, auch „bold“ möglich;
+	font-style:italic;	! Festlegung der Kursiv-Schrift;
+	text-shadow: 1px 1px white, 2px 2px white, 3px 3px white; ! Text-Schatten;
+  	background-color:rgba(255,255,255,0.7);   ! Hintergrundfarbe;
+}
+
+/*  -----------------------------------------        */
+/*  Für Teaser (Blickfang)             	        */
+/*  -----------------------------------------        */
+.teaser {
+	font-weight:bold;				! setze Schriftart und -gewicht;
+	font-family:'Montserrat', sans-serif;
+	padding: 5px 5px;				! Innenabstand für den Teaser;
+	margin: 0 2px 4px 2px;			! Außenabstand nach unten zum nächsten Teaser;
+	border-bottom: 1px solid #ccc;		! unten gibt es eine Begrenzungslinie;
+}
+.teaser_date {
+	font-size:90%;                          ! etwas kleiner als die Standardschrift;
+}
+.teaser_title {
+	font-size:110%;                         ! etwas größer als die Standardschrift;
+	line-height:140%;
+}
+.teaser_text {
+        line-height: 140%;                     ! Anpassung der Zeilenhöhe;
+}
+a.teaser_link {
+padding-top: 4px;
+color:black;
+}
+.teaser_border {
+  color: #333;
+  border: 2px solid #548b54;
+}
