@@ -9,7 +9,7 @@
   left:0;                    ! Position ganz links;
   top:0;                     ! Position oben;
   border: 1px solid #ccc;    ! Rahmenart und -farbe;
-  background-color: #6a5acd;    ! Hintergrundfarbe;
+  background-color: #1773D4 ;    ! Hintergrundfarbe;
   width:100%;                ! Breite des Kopfbereichs;
   height:100px;              ! Höhe des Kopfbereichs;
   z-index:2;                 ! Kopfbereich überlagert andere Bereiche;                
@@ -43,7 +43,7 @@
   right:0px;                 ! Rechtsausrichtung;
   top: 150px;                ! Position unterhalb des Kopfbereiches;
   border: 1px solid #ccc;    ! Rahmenart und -farbe;
-  background-color: #00bfff;   ! Hintergrundfarbe;
+  background-color: #4199F2 ;   ! Hintergrundfarbe;
   width:200px;               ! Breite des Newsbereichs;
   min-height:300px;          ! Minimal-Höhe des Newsbereichs;
   z-index:2;                 ! Kopfbereich überlagert andere Bereiche;                
@@ -54,7 +54,7 @@
   left:0;                    ! Position ganz links;
   border: 1px solid #ccc;    ! Rahmenart und -farbe;
   width: 100%;               ! Breite des Fussbereichs;
-  background-color: #6a5acd;    ! Hintergrundfarbe;
+  background-color: #135CA8 ;    ! Hintergrundfarbe;
   height:50px;               ! Höhe des Fußbereichs;
   z-index:2;                 ! Kopfbereich überlagert andere Bereiche;
 }
@@ -64,7 +64,7 @@
 /*  ----------------------------------------- */
 
 p {
-font-family: Garamond, Verdana, Geneva, Lucida, Avantgarde, Arial; ! Festlegung der Schriftart;
+font-family: 'Montserrat', sans-serif;  ! Festlegung der Schriftart;
 font-style:normal;                                                 ! Festlegung des Schrifttyps;
 font-size:11pt;                                                    ! Festlegung des Schriftgröße;
 font-weight:normal;                                                ! Festlegung der Fettschrift;
@@ -105,7 +105,7 @@ font-size:90%;            	! Festlegung des Schriftgröße;
 	text-align:left;          ! Textausrichtung rechtbündig;
 	list-style-type: none;     ! es werden keine Aufzählungszeichen dargestellt;
 	margin: 20px 5px;          ! Abstände nach oben/unten und rechts/links;
-       padding: 5px 5px;          ! Innenabstand nach links/rechts/oben/unten;
+       padding: 0px 0px;          ! Innenabstand nach links/rechts/oben/unten;
 }
 
 .mainnav > li {
@@ -115,7 +115,7 @@ font-size:90%;            	! Festlegung des Schriftgröße;
 .mainnav > li > a.active {
 	font-weight:700;		! Festlegung der Fettschrift, auch „bold“ möglich;
 	text-shadow: 1px 1px black, 2px 2px grey, 3px 3px 	#696969; ! Text-Schatten;
-  	color: rgba(90,195,208,1);	! Festlegung des Schriftfarbe;
+  	color: rgba(F2F2F2);	! Festlegung des Schriftfarbe;
 }
 /*  Formatierung des Menüpunkts, wenn die Maus darüber fährt */
 .mainnav > li > a:hover {
