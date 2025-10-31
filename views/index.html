@@ -12,49 +12,45 @@
 
     <!-- import the webpage's stylesheet -->
     <link rel="stylesheet" href="/style.css" />
-       <!-- Einbindung der Javascript-Bibliothek JQUERY von GOOGLE -->
-   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-  </head>
- <body onload="setTimeout(function() {setActiveMenu('#main_menu_item_home');}, 1000);">
-
-      <!-- import the webpage's javascript file -->
-    <script src="/script.js" defer></script>
-
-         <!-- import the webpage's fonts -->
-    <link rel="stylesheet" href="/fonts.css" />
-
-  </head>
-
-  <body>
-    <div id="kopfbereich"><p class=“header-title“>Dies ist eine Headerüberschrift</p></div>
     
-    <!-- Ende kopfbereich -->
+    <!-- Einbindung der Javascript-Bibliothek JQUERY von GOOGLE -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+</head>
+<body onload="setTimeout(function() {setActiveMenu('#main_menu_item_home');}, 1000);">
+<div id="kopfbereich">
 
-    <div id="navibereich">
+  <p class=“header-title“>Dies ist eine Headerüberschrift</p>
+</div> 
 
-<ul id="nav" class="naviformat mainnav">
+<!-- Ende kopfbereich -->
+
+	<div id="navibereich">
+    <ul id="nav" class="naviformat mainnav">
 <li><a id="main_menu_item_home" class="" href="index.html">HOME</a></li>
 <li><a id="main_menu_item_daten" class="" href="daten.html">PERSÖNLICHES</a></li>
 <li><a id="main_menu_item_schulbildung" class="" href="schulbildung.html">SCHULBILDUNG</a></li>
 <li><a id="main_menu_item_berufsbildung" class="" href="berufsbildung.html">BERUFSBILDUNG</a></li>
 <li><a id="main_menu_item_kontakt" class="" href="kontakt.html">KONTAKT</a></li>
+</ul>
+  </div> 
+  
+  <!-- Ende navibereich -->
 
-    </div><!-- Ende navibereich -->
-    
-    <div id="textbereich">
-       <div class="content-block">
-           <p class="title">Dies ist eine Überschrift</p> 
+	<div id="textbereich">
+
+              <div class="content-block">
+	       <p class="title">Dies ist eine Überschrift</p> 
 	       <p>Dies ist ein Beispieltext</p>
+              </div><!-- Ende content-block -->
 
-       </div><!-- Ende content-block -->
-    </div><!-- Ende textbereich -->
+	</div> <!-- Ende textbereich -->
 
-      <div id="fussbereich"></div>
-    <!-- Ende fussbereich -->
+ 	<div id="fussbereich">
 
-    <div id="newsbereich">
+  </div> <!-- Ende fussbereich -->
 
-      <div class = ”teaser”>
+  	<div id="newsbereich">
+           <div class = ”teaser”>
                                           <p class = ”teaser_date”>News-Datum</p>
                                           <p class = ”teaser_title”>News-Titel</p>
                                           <p class = ”teaser_text”>Dies ist der News-Text</p>
@@ -62,7 +58,20 @@
                                  <hr class=“teaser_border“>
 
     </div>
-    <!-- Ende newsbereich -->
+
+    </div>  <!-- Ende newsbereich --> 
+   <script>
+
+    $( window ).on( "load", function() { 
+       load_content('navibereich', 'content-navi.html');
+       load_content('newsbereich', 'content-news.html');
+       load_content('fussbereich', 'content-footer.html');
+       load_content('kopfbereich', 'content-header.html');
+    });
+  </script>
   </body>
 </html>
+
+
+
 
