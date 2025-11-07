@@ -1,4 +1,14 @@
 
+/*  -----------------------------------------        */
+/*  Übergreifend / Body                              */
+/*  -----------------------------------------        */
+html, body {
+ background-image:url(/Folie1.PNG); !Hintergrundbild verwenden;
+ background-repeat:no-repeat; !Hintergrundbild wird nicht wiederholt;
+ background-size: cover;      !Parallax-Effekt - Hintergundbild ist bildschirmfüllend;
+ overflow:hidden;             !Alle Body-Scrollbalken verstecken;
+}
+
 
 /*  ------------------------------------*/
 /*  Standardpositionierung der DIV-Boxen*/
@@ -153,3 +163,11 @@ color:black;
   color: #333;
   border: 2px solid #548b54;
 }
+
+.header-image {
+content:url(passbild.jpg); // Den Link zu einem Bild kann mit Hilfe von CSS festgelegt werden;
+width:200px;  // Größe des Bildes wird festgelegt
+float:left;  // Das Bild wird links angezeigt. Bei float:right wird es rechts angezeigt;
+margin:5px;
+}
+
