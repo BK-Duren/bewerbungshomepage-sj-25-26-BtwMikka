@@ -165,9 +165,11 @@ color:black;
 }
 
 .header-image {
-content:url(passbild.jpg); // Den Link zu einem Bild kann mit Hilfe von CSS festgelegt werden;
+content:url(/LOGO 111.PNG); // Den Link zu einem Bild kann mit Hilfe von CSS festgelegt werden;
 width:200px;  // Größe des Bildes wird festgelegt
 float:left;  // Das Bild wird links angezeigt. Bei float:right wird es rechts angezeigt;
 margin:5px;
+}
+
 }
 
