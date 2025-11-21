@@ -16,14 +16,25 @@ html, body {
 
 #kopfbereich {
   position:fixed;            ! Position des  Kopfbereichs ist immer oben - FIX!;
-  left:0;                    ! Position ganz links;
-  top:0;                     ! Position oben;
-  border: 1px solid #ccc;    ! Rahmenart und -farbe;
+  left:0px;                    ! Position ganz links;
+  top: 0px;                     ! Position oben;
+  border: 1px solid #1773D4;    ! Rahmenart und -farbe;
   background-color: #1773D4 ;    ! Hintergrundfarbe;
   width:100%;                ! Breite des Kopfbereichs;
-  height:100px;              ! Höhe des Kopfbereichs;
-  z-index:2;                 ! Kopfbereich überlagert andere Bereiche;                
+  max-height: 100px;              ! Höhe des Kopfbereichs;
+  z-index:4;                 ! Kopfbereich überlagert andere Bereiche;                
 }
+#logo {
+  position:fixed;            ! Position des  Kopfbereichs ist immer oben - FIX!;
+  left:0;                    ! Position ganz links;
+  top:0;                     ! Position oben;
+  border: 1px solid #1773D4;    ! Rahmenart und -farbe;
+  background-color: #1773D4;    ! Hintergrundfarbe;
+  width:2000px;                ! Breite des Kopfbereichs;
+  height:150px;              ! Höhe des Kopfbereichs;
+  z-index:3;                 ! Kopfbereich überlagert andere Bereiche;            
+  }
+
 #navibereich {
   position:fixed;            ! Position des Navibereichs immer links!;
   top: 100px;                ! Position unterhalb des Kopfbereiches;
@@ -76,22 +87,28 @@ html, body {
 p {
 font-family: 'Montserrat', sans-serif;  ! Festlegung der Schriftart;
 font-style:normal;                                                 ! Festlegung des Schrifttyps;
-font-size:11pt;                                                    ! Festlegung des Schriftgröße;
+font-size: 10px;                                                    ! Festlegung des Schriftgröße;
 font-weight:normal;                                                ! Festlegung der Fettschrift;
 color:#000000;                                                     ! Festlegung des Schriftfarbe;
 }
 .title {
-font-size:12pt;                                                    ! Festlegung des Schriftgröße;
+font-size:24pt;                                                    ! Festlegung des Schriftgröße;
 font-weight:bold;                                                  ! Festlegung der Fettschrift;
 }
 
-header-title {
+.header-title {
 font-family:‘Montserrat’, sans-serif;   ! Festlegung der Schriftart;
-font-size:24pt;				! Festlegung des Schriftgröße;
-font-weight:700;			! Festlegung des Fettschrift, hier können Sie auch bold angeben;
+font-size: 24pt;				! Festlegung des Schriftgröße;
+font-weight: 700px;			! Festlegung des Fettschrift, hier können Sie auch bold angeben;
 text-align:center;			! Schriftausrichtung, möglich ist left | center | right;
 }
 
+.header-image {
+content:url(/LOGO 111.PNG); // Den Link zu einem Bild kann mit Hilfe von CSS festgelegt werden;
+width:150px;  // Größe des Bildes wird festgelegt
+float:left;  // Das Bild wird links angezeigt. Bei float:right wird es rechts angezeigt;
+margin:5px;
+}
 
 /*  -----------------------------------------        */
 /*  Menüformatierung                                 */
@@ -162,14 +179,5 @@ color:black;
 .teaser_border {
   color: #333;
   border: 2px solid #548b54;
-}
-
-.header-image {
-content:url(/LOGO 111.PNG); // Den Link zu einem Bild kann mit Hilfe von CSS festgelegt werden;
-width:200px;  // Größe des Bildes wird festgelegt
-float:left;  // Das Bild wird links angezeigt. Bei float:right wird es rechts angezeigt;
-margin:5px;
-}
-
 }
 
