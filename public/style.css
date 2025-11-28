@@ -21,8 +21,8 @@ html, body {
   border: 1px solid #1773D4;    ! Rahmenart und -farbe;
   background-color: #1773D4 ;    ! Hintergrundfarbe;
   width:100%;                ! Breite des Kopfbereichs;
-  max-height: 100px;              ! Höhe des Kopfbereichs;
-  z-index:4;                 ! Kopfbereich überlagert andere Bereiche;                
+  max-height: 0px;              ! Höhe des Kopfbereichs;
+  z-index:6;                 ! Kopfbereich überlagert andere Bereiche;                
 }
 #logo {
   position:fixed;            ! Position des  Kopfbereichs ist immer oben - FIX!;
@@ -30,7 +30,7 @@ html, body {
   top:0;                     ! Position oben;
   border: 1px solid #1773D4;    ! Rahmenart und -farbe;
   background-color: #1773D4;    ! Hintergrundfarbe;
-  width:2000px;                ! Breite des Kopfbereichs;
+  width:100%;                ! Breite des Kopfbereichs;
   height:150px;              ! Höhe des Kopfbereichs;
   z-index:3;                 ! Kopfbereich überlagert andere Bereiche;            
   }
@@ -105,9 +105,9 @@ text-align:center;			! Schriftausrichtung, möglich ist left | center | right;
 
 .header-image {
 content:url(/LOGO 111.PNG); // Den Link zu einem Bild kann mit Hilfe von CSS festgelegt werden;
-width:150px;  // Größe des Bildes wird festgelegt
+width:120px;  // Größe des Bildes wird festgelegt
 float:left;  // Das Bild wird links angezeigt. Bei float:right wird es rechts angezeigt;
-margin:5px;
+margin:0px;
 }
 
 /*  -----------------------------------------        */

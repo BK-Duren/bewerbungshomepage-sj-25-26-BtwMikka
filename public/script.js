@@ -20,7 +20,7 @@ function active_remove() {
 /* -- Inhalte laden                           */
 /* -- ---------------- ---------------------- */
    function load_content(bereich, page) {
-       obj1 = document.getElementById(bereich);
+       let obj1 = document.getElementById(bereich);
        $(obj1).load('/' + page, function () {
       });
     }
