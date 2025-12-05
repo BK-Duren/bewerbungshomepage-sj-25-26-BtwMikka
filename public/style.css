@@ -78,6 +78,8 @@ html, body {
   background-color: #135CA8 ;    ! Hintergrundfarbe;
   height:50px;               ! Höhe des Fußbereichs;
   z-index:2;                 ! Kopfbereich überlagert andere Bereiche;
+  text-align:center;           ! Text wird im Fussbereich zentriert;
+ padding:10px;                ! Innenabstand einheitlich bei 10px;
 }
 
 /*  ----------------------------------------- */
@@ -109,6 +111,47 @@ width:120px;  // Größe des Bildes wird festgelegt
 float:left;  // Das Bild wird links angezeigt. Bei float:right wird es rechts angezeigt;
 margin:0px;
 }
+
+.footer-text {
+margin:0;
+padding:5px;
+line-height:18px;
+font-size:90%;           ! Festlegung des Schriftgröße;
+font-weight:bold;        ! Festlegung der Fettschrift;
+color: rgba(0,0,0,0.5);  ! Festlegung der Schriftfarbe (hier schwarz);
+text-decoration:none;		! Keinen Unterstrich unterhalb des Menütitels;
+text-transform:uppercase;	! Verwende Großbuchstaben;
+}
+
+ 
+.footer-text > a:hover {
+
+	font-weight:700;	! Festlegung der Fettschrift für Montserrat, ansonsten bold einstellen;
+	font-style:oblique;	! Festlegung der Kursiv-Schrift;
+	color: rgba(255,255,255,1);	! Festlegung des Schriftfarbe (weiß);
+}
+
+/*  -----------------------------------------   */
+/* -----Formatierung der Links----------------- */
+/*  -----------------------------------------   */
+a.link {
+   padding-top: 4px;
+   color: rgba(255,255,255,0.5);
+   font-weight:bold;
+   transition: all 0.3s ease-out 0s; ! Definition des Übergangs zu Hover;
+   text-decoration:none;		! Kein Unterstrich unterhalb des Titel;
+   text-shadow: 1px 1px 1px black; ! Festlegung des Text-Shadows;
+}
+
+a.link_black {
+   padding-top: 4px;
+   color: rgba(0,0,0,0.5);
+   font-weight:bold;
+   transition: all 0.3s ease-out 0s; ! Definition des Übergangs zu Hover;
+   text-decoration:none;		! Kein Unterstrich unterhalb des Titels;
+   text-shadow: 1px 1px 1px grey; ! Festlegung des Text-Shadows (Schatten);
+}
+
 
 /*  -----------------------------------------        */
 /*  Menüformatierung                                 */
