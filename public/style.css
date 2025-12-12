@@ -3,9 +3,9 @@
 /*  Übergreifend / Body                              */
 /*  -----------------------------------------        */
 html, body {
- background-image:url(/Folie1.PNG); !Hintergrundbild verwenden;
+ background-image:url(/Wasser1.jpg); !Hintergrundbild verwenden;
  background-repeat:no-repeat; !Hintergrundbild wird nicht wiederholt;
- background-size: cover;      !Parallax-Effekt - Hintergundbild ist bildschirmfüllend;
+ background-size: cover ;      !Parallax-Effekt - Hintergundbild ist bildschirmfüllend;
  overflow:hidden;             !Alle Body-Scrollbalken verstecken;
 }
 
@@ -106,7 +106,7 @@ text-align:center;			! Schriftausrichtung, möglich ist left | center | right;
 }
 
 .header-image {
-content:url(/LOGO 111.PNG); // Den Link zu einem Bild kann mit Hilfe von CSS festgelegt werden;
+content:url(/MP12345.png); // Den Link zu einem Bild kann mit Hilfe von CSS festgelegt werden;
 width:120px;  // Größe des Bildes wird festgelegt
 float:left;  // Das Bild wird links angezeigt. Bei float:right wird es rechts angezeigt;
 margin:0px;
