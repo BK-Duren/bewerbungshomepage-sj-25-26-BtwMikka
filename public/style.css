@@ -62,11 +62,11 @@ html, body {
 #newsbereich {
   position:fixed;            ! Position des Newsbereichs immer rechts!;
   right:0px;                 ! Rechtsausrichtung;
-  top: 150px;                ! Position unterhalb des Kopfbereiches;
+  top: 160px;                ! Position unterhalb des Kopfbereiches;
   border: 1px solid #ccc;    ! Rahmenart und -farbe;
   background-color: #4199F2 ;   ! Hintergrundfarbe;
   width:200px;               ! Breite des Newsbereichs;
-  min-height:300px;          ! Minimal-Höhe des Newsbereichs;
+  min-height:200px;          ! Minimal-Höhe des Newsbereichs;
   z-index:2;                 ! Kopfbereich überlagert andere Bereiche;                
 }
 #fussbereich {
@@ -89,9 +89,9 @@ html, body {
 p {
 font-family: 'Montserrat', sans-serif;  ! Festlegung der Schriftart;
 font-style:normal;                                                 ! Festlegung des Schrifttyps;
-font-size: 10px;                                                    ! Festlegung des Schriftgröße;
+font-size: 15px;                                                    ! Festlegung des Schriftgröße;
 font-weight:normal;                                                ! Festlegung der Fettschrift;
-color:#000000;                                                     ! Festlegung des Schriftfarbe;
+color:white;                                                     ! Festlegung des Schriftfarbe;
 }
 .title {
 font-size:24pt;                                                    ! Festlegung des Schriftgröße;
@@ -128,7 +128,7 @@ text-transform:uppercase;	! Verwende Großbuchstaben;
 
 	font-weight:700;	! Festlegung der Fettschrift für Montserrat, ansonsten bold einstellen;
 	font-style:oblique;	! Festlegung der Kursiv-Schrift;
-	color: rgba(255,255,255,1);	! Festlegung des Schriftfarbe (weiß);
+	color: white;	! Festlegung des Schriftfarbe (weiß);
 }
 
 /*  -----------------------------------------   */
@@ -161,7 +161,7 @@ a.link_black {
 .naviformat a, button {
   	font-family: 'Montserrat', sans-serif;
   	text-transform:uppercase;	! Verwende Großbuchstaben;
-font-size:90%;            	! Festlegung des Schriftgröße;
+font-size:100%;            	! Festlegung des Schriftgröße;
 	font-weight:700;		      ! Festlegung Fettschrift für Montserrat;
 	color: rgb(0,0,0);		! Festlegung des Schriftfarbe (schwarz);
 	display: block;			! Art der Anzeige als Blockelement;
@@ -185,14 +185,14 @@ font-size:90%;            	! Festlegung des Schriftgröße;
 .mainnav > li > a.active {
 	font-weight:700;		! Festlegung der Fettschrift, auch „bold“ möglich;
 	text-shadow: 1px 1px black, 2px 2px grey, 3px 3px 	#696969; ! Text-Schatten;
-  	color: rgba(F2F2F2);	! Festlegung des Schriftfarbe;
+  	color: yellow ;	! Festlegung des Schriftfarbe;
 }
 /*  Formatierung des Menüpunkts, wenn die Maus darüber fährt */
 .mainnav > li > a:hover {
 	font-weight:700;		! Festlegung der Fettschrift, auch „bold“ möglich;
 	font-style:italic;	! Festlegung der Kursiv-Schrift;
 	text-shadow: 1px 1px white, 2px 2px white, 3px 3px white; ! Text-Schatten;
-  	background-color:rgba(255,255,255,0.7);   ! Hintergrundfarbe;
+  	background-color: white ;   ! Hintergrundfarbe;
 }
 
 /*  -----------------------------------------        */
@@ -217,7 +217,7 @@ font-size:90%;            	! Festlegung des Schriftgröße;
 }
 a.teaser_link {
 padding-top: 4px;
-color:black;
+color:rgb(0, 0, 0);
 }
 .teaser_border {
   color: #333;
