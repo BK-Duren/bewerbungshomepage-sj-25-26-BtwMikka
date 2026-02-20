@@ -1,0 +1,104 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.1 Transitional//EN">
+<html>
+  <head>
+    <title>Website-Projekt</title>
+    <meta name="AUTHOR" content="Mikka Elyas Pauli">
+    <meta name="COPYRIGHT" content="Copyright (c) 2025 by Mikka Elyas Pauli">
+    <meta name="ROBOTS" content="INDEX, FOLLOW">
+    <meta name="DESCRIPTION" content="Dies ist die Bewerbungshomepage von Mikka Elyas Pauli">
+    <meta name ="KEYWORDS" content ="Bewerbungshomepage, Mikka Elyas Pauli, Bewerbung">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- import the webpage's stylesheet -->
+    <link rel="stylesheet" href="/style.css" />
+    
+    <!-- Einbindung der Javascript-Bibliothek JQUERY von GOOGLE -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+<!-- import the webpage's javascript file -->
+<script src="/script.js" defer></script>  
+
+</head>
+<body onload="setTimeout(function() {setActiveMenu('#main_menu_item_galerie');}, 1000);">
+
+<div id="kopfbereich">
+
+  
+
+</div> 
+
+<div id="logo">
+
+  <img class="header-image" src="LOGO 111.PNG" width="130" height="100"
+
+</div> 
+
+<!-- Ende kopfbereich -->
+
+	<div id="navibereich">
+
+
+ 
+  </div>
+  
+  <!-- Ende navibereich -->
+
+	<div id="textbereich">
+
+   <div class="content-block">
+	<p class="title">Bildergalerie</p>
+<section class="gallery">
+	<figure tabindex="0">
+		<img src="MP12345.png" alt="Name 1">
+		<figcaption>Erläuterung zu Bild 1</figcaption>
+	</figure>
+	<figure tabindex="1">
+		<img src="aachen_dom_hochformat.jpg" alt=" Name 2">
+		<figcaption> Erläuterung zu Bild 2</figcaption>
+	</figure>
+	<figure tabindex="2">
+		<img src=" Bild 3.jpg" alt=" Name 3">
+		<figcaption> Erläuterung zu Bild 3</figcaption>
+	</figure>
+	<figure tabindex="3">
+		<img src=" Bild 4.jpg" alt=" Name 4">
+		<figcaption> Erläuterung zu Bild 4</figcaption>
+	</figure>
+ 	<figure tabindex="4">
+		<img src=" Bild 5.jpg" alt=" Name 5">
+		<figcaption> Erläuterung zu Bild 5</figcaption>
+	</figure> 
+<figure tabindex="5">
+		<img src="Bild 6.jpg" alt=" Name 6">
+		<figcaption> Erläuterung zu Bild 6</figcaption>
+	</figure>
+</section>
+
+  </div><!-- Ende content-block -->
+
+	</div> <!-- Ende textbereich -->
+
+ 	<div id="fussbereich">
+
+
+  </div> <!-- Ende fussbereich -->
+
+  	<div id="newsbereich">
+   
+    
+    </div>
+
+    </div>  <!-- Ende newsbereich --> 
+   <script>
+
+    $( window ).on( "load", function() { 
+       load_content('navibereich', 'content-navi.html');
+       load_content('newsbereich', 'content-news.html');
+       load_content('fussbereich', 'content-footer.html');
+       load_content('kopfbereich', 'content-header.html');
+    });
+
+  </script>
+  </body>
+</html>
+
