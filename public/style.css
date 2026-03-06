@@ -24,6 +24,7 @@ html, body {
   max-height: 0px;              ! Höhe des Kopfbereichs;
   z-index:6;                 ! Kopfbereich überlagert andere Bereiche;                
 }
+
 #logo {
   position:fixed;            ! Position des  Kopfbereichs ist immer oben - FIX!;
   left:0;                    ! Position ganz links;
@@ -81,6 +82,12 @@ html, body {
   text-align:center;           ! Text wird im Fussbereich zentriert;
  padding:10px;                ! Innenabstand einheitlich bei 10px;
 }
+
+/*  Höhe des Contentbereichs festlegen */                    
+.content-block {
+  padding-bottom: 1000px;
+}
+
 
 /*  ----------------------------------------- */
 /*  Schriftformatierung                       */
@@ -280,3 +287,90 @@ color:rgb(0, 0, 0);
   width:  calc(var(--size)*var(--zoom));
   height: calc(var(--size)*var(--zoom));
 }
+
+/* -------------------------------------------------------------------------- */
+/* Kontakt-Formular                                                           */
+/* -------------------------------------------------------------------------- */
+/* Als Standard wird alles zentriert, sieht besser aus */
+#contact-formular {
+        text-align:center;
+}
+/* Definition der Felder des Kontaktformular */
+#contact-formular input[type="text"], #contact-formular textarea, #contact-formular 
+input[type="email"] {
+        color: #999999;
+        padding-left: 3%;
+        padding-right: 3%;
+        padding-top: 15px;
+        padding-bottom: 15px;
+        width:100%;
+        height:20px;
+        background:#f5f5f5;
+        border-radius:3px;
+        margin-bottom:20px;
+        border:0;
+        box-shadow: 0 0px 3px rgba(0, 0, 0, 0.22) inset;
+        transition: all 0.2s linear;
+ }
+#contact-formular input[type="checkbox"] {
+        margin-bottom:10px;
+        vertical-align:middle;
+}
+#contact-formular textarea  {
+        height: 250px;
+        vertical-align:top;
+}
+#contact-formular input[type=text]:focus, #contact-formular input[type="textarea"]:focus, #contact-formular input[type=email]:focus {
+        background-color: #e1e1e1;
+}
+/* Button im Kontaktformular formatieren */
+#contact-formular input[type="submit"] {
+        color:#22222;
+        background-color:grey;
+        text-transform:uppercase;
+        padding:10px 15px;
+        letter-spacing:0;
+        line-height:14px;
+        cursor:pointer;
+        border-radius:3px;
+        transition:all 0.3s ease 0s;
+        text-align:center;
+}
+/*  Definition der Tabelle für das Formular */
+.form-table {
+padding-right: 10px; 
+margin-left: auto; 
+margin-right: auto; 
+border:"0";
+cellspacing="1";
+cellpadding="2";
+width:50%;
+}
+
+/* Definition der Labels im Formular */
+.form-label {
+        vertical-align:top;
+        padding-right:10px;
+        width:95%;
+        font-weight:bold;
+}
+	.form-field {
+        vertical-align:top;
+        width:95%;
+}
+.form-label-kontakt {
+        vertical-align:top;
+        padding-right:10px;
+        width:50%;
+        font-weight:bold;
+}
+.form-field-kontakt {
+        vertical-align:top;
+        text-align:left;
+        width:50%;
+}
+.form-submit {
+padding-top:25px;
+text-align:center;
+}
+
