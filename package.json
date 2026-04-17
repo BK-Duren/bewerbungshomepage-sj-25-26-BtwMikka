@@ -13,12 +13,18 @@
   },
   "dependencies": {
     "body-parser": "^2.2.0",
+    "canvas": "^3.2.3",
     "config.js": "^0.1.0",
+    "cors": "^2.8.6",
     "dotenv": "^16.5.0",
+    "ejs": "^5.0.2",
     "express": "^4.21.2",
     "express-device": "^0.4.2",
+    "gray-matter": "^4.0.3",
+    "markdown-it": "^14.1.1",
     "multiparty": "^4.2.3",
-    "nodemailer": "^6.10.1"
+    "nodemailer": "^6.10.1",
+    "zero-md": "^3.1.7"
   },
   "devDependencies": {
     "nodemon": "^3.1.0"

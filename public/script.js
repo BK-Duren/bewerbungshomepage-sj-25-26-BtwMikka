@@ -79,7 +79,7 @@ var alert_flag = "true";
    return false;
   }
  if(contactForm.ds_check.checked == false)  {
-   alert("Wenn Sie die Speicherung Ihrer Daten nicht wünschen, nehmen Sie bitte mit uns telefonisch Kontakt auf. Die Kontaktinformationen finden Sie ebenfalls auf unserer Web-site.");
+   alert("Wenn Sie die Speicherung Ihrer Daten nicht wünschen, nehmen Sie bitte mit uns telefonisch Kontakt auf. Die Kontaktinformationen finden Sie ebenfalls auf unserer Website.");
    contactForm.ds_check.focus();
    var alert_flag = "false";
    return false;
@@ -110,4 +110,6 @@ var alert_flag = "true";
  }
   
 }
+
+
 

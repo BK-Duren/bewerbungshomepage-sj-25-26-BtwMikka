@@ -1,0 +1,80 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.1 Transitional//EN">
+<html>
+  <head>
+    <title>Website-Projekt</title>
+    <meta name="AUTHOR" content="Mikka Elyas Pauli">
+    <meta name="COPYRIGHT" content="Copyright (c) 2025 by Mikka Elyas Pauli">
+    <meta name="ROBOTS" content="INDEX, FOLLOW">
+    <meta name="DESCRIPTION" content="Dies ist die Bewerbungshomepage von Mikka Elyas Pauli">
+    <meta name ="KEYWORDS" content ="Bewerbungshomepage, Mikka Elyas Pauli, Bewerbung">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- import the webpage's stylesheet -->
+    <link rel="stylesheet" href="/style.css" />
+    
+    <!-- Einbindung der Javascript-Bibliothek JQUERY von GOOGLE -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+<!-- import the webpage's javascript file -->
+<script src="/script.js" defer></script>  
+
+</head>
+<body onload="setTimeout(function() {setActiveMenu('#main_menu_item_home');}, 1000);">
+
+<div id="kopfbereich">
+
+  
+
+</div> 
+
+<div id="logo">
+
+  <img class="header-image" src="LOGO 111.PNG" width="130" height="100"
+
+</div> 
+
+<!-- Ende kopfbereich -->
+
+	<div id="navibereich">
+
+
+ 
+  </div>
+  
+  <!-- Ende navibereich -->
+
+	<div id="textbereich">
+
+   <div class="content-block">
+	
+  </div><!-- Ende content-block -->
+
+	</div> <!-- Ende textbereich -->
+
+ 	<div id="fussbereich">
+
+
+  </div> <!-- Ende fussbereich -->
+
+  	<div id="newsbereich">
+   
+    
+    </div>
+
+    </div>  <!-- Ende newsbereich --> 
+   <script>
+
+    $( window ).on( "load", function() { 
+       load_content('navibereich', 'content-navi.html');
+       load_content('newsbereich', 'content-news.html');
+       load_content('fussbereich', 'content-footer.html');
+       load_content('kopfbereich', 'content-header.html');
+    });
+
+  </script>
+  </body>
+</html>
+
+
+
+
