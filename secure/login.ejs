@@ -46,7 +46,34 @@
 	<div id="textbereich">
 
    <div class="content-block">
-	
+	<h2>Login für den passwortgeschützten Bereich</h2>
+        <form action="/auth" method="post">
+            <table class="form-table">
+                <tr>
+                    <td class="form-label" align="right">Username:</td>
+                    <td class="form-field"><input id="Username" class="type" type="text" name="username" value=""/></td>
+                </tr>
+                <tr>
+                    <td class="form-label" align="right">Password:</td>
+                    <td class="form-field"><input id="password" class="type" type="password" name="password" val-ue=""/></td>
+                </tr>
+                <tr>
+                    <td class="form-submit" colspan="2">
+                    <div class="submit">
+                        <input id="Submit" type="submit" value="Senden" />
+                    </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="form-label" colspan="2">
+                    <div>
+                        <p class="title"><%- posts %></p>
+                    </div>
+                    </td>
+                </tr>
+                </table>
+        </form>
+
   </div><!-- Ende content-block -->
 
 	</div> <!-- Ende textbereich -->
