@@ -25,7 +25,9 @@ function active_remove() {
       });
     }
 
-/* ------------------------------------------ */
+
+    
+ /* ------------------------------------------ */
 /* -- Funktion für das Versenden der Mail     */
 /* -- ---------------- ---------------------- */
 const sendMail = (mail) => {
@@ -79,7 +81,7 @@ var alert_flag = "true";
    return false;
   }
  if(contactForm.ds_check.checked == false)  {
-   alert("Wenn Sie die Speicherung Ihrer Daten nicht wünschen, nehmen Sie bitte mit uns telefonisch Kontakt auf. Die Kontaktinformationen finden Sie ebenfalls auf unserer Website.");
+   alert("Wenn Sie die Speicherung Ihrer Daten nicht wünschen, nehmen Sie bitte mit uns telefonisch Kontakt auf. Die Kontaktinformationen finden Sie ebenfalls auf unserer Web-site.");
    contactForm.ds_check.focus();
    var alert_flag = "false";
    return false;
@@ -93,7 +95,7 @@ var alert_flag = "true";
     obj_submit.style.display = 'none';
  
     //Dies stellt sicher, dass die Mail nur einmal gesendet wird
-    event.preventDefault();
+    // event.preventDefault();
     
     //Hole die Daten 
     let mail = new FormData(contactForm);
@@ -106,10 +108,5 @@ var alert_flag = "true";
    contactForm.email.value = "";
    contactForm.reason.value = "";
    contactForm.formmessage.value = "";
- 
- }
-  
-}
-
-
-
+   }
+  }

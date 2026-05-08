@@ -4,19 +4,19 @@
 // init project
 import { fileURLToPath } from 'url';
 import { dirname } from 'path';
-import { path } from 'path';
 import express from 'express';
 import bodyParser from 'body-parser';
 import { configDotenv } from "dotenv";
 configDotenv()
 import nodemailer from "nodemailer";
 import multiparty from "multiparty";
+configDotenv();
 import cors from 'cors';
+import path from 'path';
 import matter from 'gray-matter';
 const app = express();
 app.set("view engine", "ejs");
 app.use(cors());
-import path from 'path';
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
 app.use(bodyParser.urlencoded({ extended: true }));
@@ -119,7 +119,10 @@ app.get("/kontakt", (request, response) => {
 app.get("/impressum", (request, response) => {
   response.sendFile(`${__dirname}/views/impressum.html`);
 });
-
+// Routing der safe-area.html als /safe-area
+app.get("/safe-area", (request, response) => {
+  response.sendFile(`${__dirname}/secure/safe-area.html`);
+});
 
 // listen for requests :)
 var listener = app.listen(process.env.PORT, () => {
@@ -130,67 +133,57 @@ var listener = app.listen(process.env.PORT, () => {
 // The E-Mail-Transport initializing
 // *******************************
 const transporter = nodemailer.createTransport({
-  host: "mail.gmx.net", //replace with your email provider - this is the host for gmx mail
-  port: 587, // this port number is usally standard
-  auth: {
-    user: process.env.EMAIL, //This is your E-Mail-Address as environment variable -> see .env
-    pass: process.env.PASS,  //This is your E-Mail-Password as environment variable -> see .env
-  },
-});
-// verify connection configuration
-transporter.verify(function (error, success) {
-  if (error) {
-    //console.log(error);
-  } else {
-    //console.log("Server is ready to take our messages");
-  }
-});
+ host: "mail.gmx.net", //replace with your email provider - this is the host for gmx mail
+ port: 587, // this port number is usally standard
+ auth: {
+   user: process.env.EMAIL, //This is your E-Mail-Address as environment variable -> see .env
+   pass: process.env.PASS,  //This is your E-Mail-Password as environment variable -> see .env
 
-//Funktion für das Senden der E-Mail, hier werden alle Felder des Formulars mit den Da-ten "vorbereitet"
-app.post("/send", (req, res) => {
-  // Sending the E-Mail
-  let form = new multiparty.Form();
-  let data = {};
-  form.parse(req, function (err, fields) {
-    //console.log(fields);
-    Object.keys(fields).forEach(function (property) {
-      data[property] = fields[property].toString();
-    });
-    //Hier wird die E-Mail an Euch definiert. Bitten halten Sie sich genau an der vorge-gebenen Schreibweise, Info: \n ist ein Umbruch
-    const mail1 = {
-      from: process.env.EMAIL,
-      to: process.env.EMAIL,
-      subject: `Mail von der Website: ${data.reason}`,
-      text: ` Name: ${data.fullname} \n E-Mail: <${data.email}> \n Nachricht: ${da-ta.formmessage}`,
-    };
-    //Hier wird die E-Mail abgesendet
-    transporter.sendMail(mail1, (err, data) => {
-      if (err) {
-        //console.log(err);
-        res.status(500).send("Something went wrong.");
-      } else {
-        res.status(200).send("Email successfully sent to recipient!");
-      }
-    });
-     //Hier wird die E-Mail an den Sender definiert, der eine Kopie seiner Nachricht er-hält.
-    const mail2 = {
-      from: process.env.EMAIL,
-      to: data.email,
-      subject: `Ihre Mail von der Website: ${data.reason}`,
-      text: ` Name: ${data.fullname} \n E-Mail: <${data.email}> \n Nachricht: ${da-ta.formmessage}`,
-    };
-    //Hier wird die E-Mail abgesendet
-    transporter.sendMail(mail2, (err, data) => {
-      if (err) {
-        //console.log(err);
-        res.status(500).send("Something went wrong.");
-      } else {
-        res.status(200).send("Email successfully sent to recipient!");
-      }
-    });
-  });
+ },
 });
-// listen for requests :)
-var listener = app.listen(process.env.PORT, () => {
-  console.log(`Your app is listening on port ${listener.address().port}`);
+//Funktion für das Senden der E-Mail, hier werden alle Felder des Formulars mit den Daten "vorbereitet"
+app.post("/send", (req, res) => {
+ // Sending the E-Mail
+ let form = new multiparty.Form();
+ let data = {};
+ form.parse(req, async (err, fields) => {
+   if (err) return res.status(500).send("Formular-Fehler");
+ 
+   let data = {};
+   Object.keys(fields).forEach((property) => {
+     data[property] = fields[property].toString();
+   });
+   //Hier wird die E-Mail an Euch definiert. Bitten halten Sie sich genau an der vorge-gebenen Schreibweise, Info: \n ist ein Umbruch
+   const mail1 = {
+     from: process.env.EMAIL,
+     to: process.env.EMAIL,
+     subject: `Mail von der Website: ${data.reason}`,
+     text: `Name: ${data.fullname} \n E-Mail: <${data.email}> \n Nachricht: ${data.formmessage}`,
+   };
+   const mail2 = {
+     from: process.env.EMAIL,
+     to: data.email,
+     subject: `Ihre Mail von der Website: ${data.reason}`,
+
+     text: `Name: ${data.fullname} \n E-Mail: <${data.email}> \n Nachricht: ${data.formmessage}`,
+   };
+   //Hier werden die E-Mails abgesendet
+   try {
+     // Beide E-Mails gleichzeitig senden und auf beide warten
+     await Promise.all([
+
+       transporter.sendMail(mail1),
+       transporter.sendMail(mail2)
+     ]);
+ 
+     // Erst wenn BEIDE fertig sind, genau EINE Antwort senden
+     return res.status(200).send("Email successfully sent to recipient!");
+   } catch (error) {
+     console.error("Fehler beim Senden:", error);
+     // Falls IRGENDEINE Mail fehlschlägt
+     if (!res.headersSent) {
+       return res.status(500).send("Something went wrong.");
+     }
+   };
+ });
 });
